@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reservation System</title>
+    <style>
+        /* lab 2 - valentines but sad lol */
+
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Lato:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            width: 900px;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .left-side {
+            flex: 1;
+            color: #ff4d6d;
+        }
+
+        .left-side h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5em;
+            color: #c0003c;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        .left-side p {
+            font-size: 1.1em;
+            color: #555555;
+            line-height: 1.7;
+            margin-top: 10px;
+        }
+
+        .right-side {
+            flex: 0 0 380px;
+        }
+
+        .right-side h2 {
+            font-family: 'Pacifico', cursive;
+            color: #c0003c;
+            text-align: center;
+            font-size: 1.4em;
+            margin-bottom: 18px;
+        }
+
+        form {
+            background-color: #fff5f7;
+            border: 2px solid #f48fb1;
+            border-radius: 16px;
+            padding: 30px 35px;
+        }
+
+        label {
+            font-weight: 700;
+            color: #880030;
+            font-size: 0.9em;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px 11px;
+            border: 1.5px solid #f48fb1;
+            border-radius: 8px;
+            background-color: #ffffff;
+            color: #333333;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.9em;
+            outline: none;
+            transition: border 0.2s;
+            margin-top: 3px;
+        }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus {
+            border-color: #c0003c;
+            background-color: #fff0f3;
+        }
+
+        .field {
+            margin-bottom: 14px;
+        }
+
+        input[type="submit"] {
+            margin-top: 6px;
+            width: 100%;
+            padding: 11px;
+            background-color: #c0003c;
+            color: white;
+            font-family: 'Pacifico', cursive;
+            font-size: 1em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff4d6d;
+        }
+
+        input[type="submit"]:active {
+            background-color: #98002e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- left side slogan -->
+        <div class="left-side">
+            <h1>Heartbroken<br>Restaurant</h1>
+            <p>Because nothing says romance<br>like eating alone on Valentine's Day.</p>
+            <p style="margin-top: 20px; font-size: 0.95em; color: #c0003c;">
+                "We put the <em>heart</em> in heartbreak."<br><br>
+                "Love left? We didn't."<br><br>
+                "Table for one? We got you."
+            </p>
+        </div>
+
+        <div class="right-side">
+            <h2>Make a Reservation</h2>
+            <form>
+                <div class="field">
+                    <label for="Name">Name: </label><br>
+                    <input type="text" id="Name" name="name">
+                </div>
+
+                <div class="field">
+                    <label for="Email">Email: </label><br>
+                    <input type="text" id="Email" name="email">
+                </div>
+
+                <div class="field">
+                    <label for="PhoneNo">Phone No.: </label><br>
+                    <input type="text" id="PhoneNo" name="phoneno">
+                </div>
+
+                <div class="field">
+                    <label for="Date">Date: </label><br>
+                    <input type="date" id="Date" name="date">
+                </div>
+
+                <div class="field">
+                    <label for="Quantity">How many persons will be with you? </label><br>
+                    <input type="text" id="Quantity" name="Quantity">
+                </div>
+
+                <div class="field">
+                    <label for="Notes">Notes </label><br>
+                    <input type="text" id="Notes" name="notes">
+                </div>
+
+                <div class="field">
+                    <label for="Entry">Entry </label><br>
+                    <input type="text" id="Entry" name="entry">
+                </div>
+
+                <input type="submit" value="Reserve My Sad Table">
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
